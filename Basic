@@ -1,0 +1,45 @@
+#generate range of numbers
+1:10
+
+#creating a vector
+a = c(1,2,3,4,5)
+
+#creating data frame, like a table
+data = data.frame(a,b)       #where a,b are vectors
+
+#to update binary values 0,1 to given string
+<data>$<heading> = factor( <data>$<heading> , labels = c( <string1>, <string2> ))
+
+#creating subset, that is table with certain values
+men = subset( <data> , <data>$<heading> == <condition> )
+
+#summary statistics, returns all different values for the table
+summary( <data> )
+
+#create simple table (1 axis)
+table1 = table( <data>$<heading> )
+
+#create simple table (2 axis)
+table2 = table( <data>$<heading1> , <data>$<heading2> )
+
+#plotting x-y graph
+plot( <data>$<heading> , type = 'l' , main = "heading" , xlab = "xaxis" , ylab = "yaxis" , col = "red" )
+
+#creating PIE chart from table
+pie(table1)
+
+#barplot
+barplot( table2 , beside = T, xlim = c(1,15), ylim = c(0,4), col = c('red','blue'))
+
+#to add legend, that is like  _______________
+                             | red    male   |
+                             | blue   female |
+                             |_______________|
+legend( "topright" , legend = rownames( <table2> ), fill = c('red','blue'), bty = "h" )
+
+#boxplot, idk some weird bargraph
+boxplot( <data>$<heading1> ~ <data>$<heading> , col = c('red','blue'))
+__________________________________________________________________________________________________________
+
+correlation and linear regression (ho le sheet)
+
