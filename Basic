@@ -43,3 +43,30 @@ ________________________________________________________________________________
 
 correlation and linear regression (ho le sheet)
 
+data = cars   #built in available table
+
+#varience
+v1 = var(data$speed)
+
+#covarience
+cv = cov(data$speed, data$dist)
+
+#correlation coefficient
+corr = cv / ( sd(data$speed)*sd(data$dist) )
+OR
+corr = cor(data$speed, data$dist )
+
+#test for association between paired samples
+cor.test(data$speed, data$dist)
+can also specify method = 'pearson' or 'spearman'
+
+#plotting regression line
+plot(data$speed, data$dist)
+reg = lm(data$speed ~ data$dist)
+abline(reg)
+reg2 = lm(data$dist ~ data$speed)
+abline(reg2)
+____________________________________________________________________________________________________________
+
+binomial distribution
+
