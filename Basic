@@ -71,4 +71,25 @@ ________________________________________________________________________________
 binomial distribution
 
 #no of trials
+n
 #probability of success
+p
+#probability of getting exactly 2 heads
+dbinom(2, n, p)
+
+#probability of getting at least 2 heads
+sum(dbinom(2:n, n, p)
+
+#also
+
+pbinom(2, n, p) = sum(dbinom(0:2, n, p)
+
+#expectation of x
+x = 0:n
+px = dbinom(x,n,p)
+ex=weighted.mean(x,px)
+
+#varience = ex^2 - (ex)^2
+var = weighted.mean(x*x,px) - (weigthed.mean(x,px))^2
+_____________________________________________________________________________________________________________
+
